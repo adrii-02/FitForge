@@ -1,5 +1,5 @@
 # IGNORA ENTORNO VIRTUAL
-backend\env_app
+backend/env_app/
 
 # IGNORA PYCACHE
-__pycache__
+__pycache__/
