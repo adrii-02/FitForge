@@ -1,5 +1,5 @@
 from django.db import models
-from model_exercise import Exercise
+from .model_exercise import Exercise
 
 # MODEL SERIES
 class Series(models.Model):

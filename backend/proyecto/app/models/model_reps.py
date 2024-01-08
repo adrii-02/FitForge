@@ -1,5 +1,5 @@
 from django.db import models
-from model_series import Series
+from .model_series import Series
 
 # MODEL REPS
 class Reps(models.Model):
