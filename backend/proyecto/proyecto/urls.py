@@ -21,10 +21,13 @@ from django.contrib.auth import views as auth_views
 from django.urls import include, path
 from django.views.generic import RedirectView
 
+from app.views import views_index
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('register/', register, name='register'),
     path('login/', auth_views.LoginView.as_view(), name='login'),
     path('logout/', auth_views.LogoutView.as_view(), name='logout'),
-    path('', RedirectView.as_view(url='login/', permanent=True)),
+    path('register/', register, name='register'),  # Asegúrate de que views.register exista
+    path('', views_index, name='index'),  # Cargar la vista del índice
+    #path('', RedirectView.as_view(url='login/', permanent=True)), ¿que hace?
 ]
