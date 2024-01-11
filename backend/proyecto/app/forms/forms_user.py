@@ -1,6 +1,6 @@
-from django.contrib.auth.forms import AuthenticationForm
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import get_user_model
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
+
 
 class CustomUserCreationForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
@@ -10,5 +10,4 @@ class CustomUserCreationForm(UserCreationForm):
 
 
 class CustomUserAuthenticationForm(AuthenticationForm):
-    class Meta(AuthenticationForm.Meta):
         pass
