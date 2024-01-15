@@ -1,5 +1,5 @@
 # IGNORA ENTORNO VIRTUAL
-backend/env_app/
+backend/venv_FitForge/
 
 # IGNORA PYCACHE
 __pycache__/
