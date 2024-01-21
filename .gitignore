@@ -1,5 +1,11 @@
 # IGNORA ENTORNO VIRTUAL
-backend/venv_FitForge/
+env/
 
 # IGNORA PYCACHE
 __pycache__/
+
+# IGNORAR COSAS VARIAS
+FitForge/static/
+FitForge/script_static.py
+
+leeme.txt
