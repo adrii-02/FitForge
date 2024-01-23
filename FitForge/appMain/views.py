@@ -12,7 +12,7 @@ class UserListView(generics.ListAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
 
-def crear_usuario_prueba():
+'''def crear_usuario_prueba():
     # Crear un nuevo usuario con datos de ejemplo
     nuevo_usuario = User.objects.create(
         username='usuario_prueba',
@@ -32,4 +32,4 @@ def crear_usuario_prueba():
     print(f"Usuario {nuevo_usuario.username} creado exitosamente.")
 
 # Llamar a la función para crear el usuario
-crear_usuario_prueba()
+crear_usuario_prueba()'''
