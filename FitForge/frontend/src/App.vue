@@ -1,23 +1,17 @@
 <template>
-  <!--
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-  -->
-  <UserList></UserList>
   <div class="container">
-    <h1 class="text-primary">Hola, Mundo!</h1>
-    <button class="btn btn-success">Haz clic en mí</button>
+    <router-view></router-view> <!-- Punto de salida de vue-router -->
   </div>
 </template>
 
 <script>
-import UserList from './components/UserList.vue';
+//import UserList from './components/UserList.vue';
 
 export default {
   name: 'App',
-  components: {
+  /*components: {
     UserList
-  }
+  }*/
 }
 </script>
 
