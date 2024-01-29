@@ -102,7 +102,7 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': 'pruebas123',
         'HOST': 'localhost',  # O la IP del contenedor si no es local
-        'PORT': '3307',
+        'PORT': '3306',
     }
 }
 
