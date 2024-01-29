@@ -3,6 +3,8 @@ from rest_framework import generics, status
 from django.contrib.auth.hashers import make_password
 from .models import User
 from .serializers import UserSerializer
+from django.contrib.auth import authenticate
+from rest_framework_simplejwt.tokens import RefreshToken
 
 # Create your views here.
 def home(request):
@@ -15,6 +17,23 @@ def home(request):
         _type_: _description_
     """
     return render(request, 'home.html')
+
+# Ejemplo simplificado de una vista en Django que maneja la autenticación
+def login(request):
+    username = request.data['username']
+    password = request.data['password']
+    user = authenticate(username=username, password=password)
+
+    if user is not None:
+        refresh = RefreshToken.for_user(user)
+        return {
+            'refresh': str(refresh),
+            'access': str(refresh.access_token),
+            'is_admin': user.is_superuser  # Suponiendo que queremos enviar si el usuario es admin
+        }
+    else:
+        # Manejar el caso de credenciales inválidas
+        return {'Error':'Credenciales incorrectas'}
 
 class UserListView(generics.ListAPIView):
     queryset = User.objects.all()
