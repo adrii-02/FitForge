@@ -1,8 +1,8 @@
 from django.shortcuts import render
 from rest_framework import generics, status
 from django.contrib.auth.hashers import make_password
-from .view_users import User
 from ..serializers import UserSerializer
+from ..models import User
 
 # Create your views here.
 def home(request):
