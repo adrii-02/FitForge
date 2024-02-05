@@ -2,7 +2,7 @@ from django.shortcuts import render
 from rest_framework import generics, status
 from django.contrib.auth.hashers import make_password
 from ..serializers import UserSerializer
-from ..models import User
+from ..models.model_user import User
 
 # Create your views here.
 def home(request):

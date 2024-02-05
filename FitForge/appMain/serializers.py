@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import User  # Reemplaza con tus modelos
+from .models.model_user import User  # Reemplaza con tus modelos
 
 class UserSerializer(serializers.ModelSerializer):
     #type_user = TypeUserSerializer()
